@@ -10,9 +10,3 @@ Entonces instalamos bind9 en nuestra máquina virtual con lo siguiente:
 ```
 $ sudo apt install bind9
 ```
-
-## Configuración nades.conf.local
-Lo que haremos en este apartado es configurar poniendo esto:
-```
-`zone "asircastelao.int" { type master; file "/var/lib/bind/db.asircastelao.int"; allow-query { any; }; };``
-```

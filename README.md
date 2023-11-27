@@ -53,3 +53,11 @@ allow-query {
 };`
 ```
 
+## db.asircastelao.int
+Lo que haremos en este apartado es crear una zona con este nombre y añadir lo siguiente:
+
+```
+
+    @		IN SOA	ns.asircastelao.int. some.email.address. ( - 17161016   ; serial - 10800      ; refresh (3 hours) - 3600       ; retry (1 hour) - 604800     ; expire (1 week) - 38400      ; minimum (10 hours 40 minutes) ) @		IN NS	ns.asircastelao.int. ns		IN A 	172.28.5.1 test	IN A	172.28.5.4 wwww    IN A    172.28.5.7 alias	IN CNAME  test texto   IN TXT 	mensaje
+
+```

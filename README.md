@@ -11,8 +11,45 @@ Entonces instalamos bind9 en nuestra máquina virtual con lo siguiente:
 $ sudo apt install bind9
 ```
 
-## Configuración nades.conf.local
-Lo que haremos en este apartado es configurar poniendo esto:
+## Configuración named.conf.local
+Lo que haremos en este apartado es entrar en:
+
+```
+$ sudo nano /etc/named.conf,local
+```
+
+para configurar poniendo esto:
 ```
 `zone "asircastelao.int" { type master; file "/var/lib/bind/db.asircastelao.int"; allow-query { any; }; };``
 ```
+
+## Configuración named.conf.options
+Lo mismo:
+
+```
+$ sudo nano /etc/named.conf,local
+```
+
+para configurar poniendo esto:
+
+```
+
+
+`options { directory "/var/cache/bind";
+
+forwarders {
+ 	8.8.8.8;
+	1.1.1.1;
+ };
+ forward only;
+
+listen-on { any; };
+listen-on-v6 { any; };
+
+allow-query {
+	any;
+};
+
+};`
+```
+
